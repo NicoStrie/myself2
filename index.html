@@ -22,12 +22,30 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
   <link href="css/styles.css" rel="stylesheet" />
+
   <style>
-    /* Enable dropdown on hover for large screens */
+    /* Hover dropdown support for desktop */
     @media (min-width: 992px) {
       .dropdown:hover .dropdown-menu {
         display: block;
       }
+    }
+
+    /* Custom dropdown style */
+    .navbar .dropdown-menu {
+      background-color: #f8f9fa; /* light gray */
+      border: none; /* remove border */
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      box-shadow: none;
+    }
+
+    .navbar .dropdown-item {
+      font-size: 0.875rem;
+      padding: 0.5rem 1rem;
+    }
+
+    .navbar .dropdown-item:hover {
+      background-color: #e9ecef;
     }
   </style>
 </head>
@@ -49,8 +67,8 @@
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
-            
-            <!-- Dropdown menu for Projects -->
+
+            <!-- Dropdown menu -->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Projects
