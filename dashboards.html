@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="Dashboards by Nicolas Striebel" />
     <meta name="author" content="Nicolas Striebel" />
-    <title>Dashboards - (Please accept the cookies) </title>
+    <title>Dashboards - (Please accept the cookies)</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Google Fonts -->
@@ -24,6 +24,21 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Theme CSS-->
     <link href="css/styles.css" rel="stylesheet" />
+
+    <style>
+      .iframe-container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+      }
+      iframe.full-dashboard {
+        flex-grow: 1;
+        border: none;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
   </head>
   <body class="d-flex flex-column h-100">
     <!-- Google Tag Manager (noscript) -->
@@ -33,7 +48,7 @@
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <main class="flex-shrink-0">
+    <main class="flex-shrink-0 d-flex flex-column flex-grow-1">
       <!-- Navigation-->
       <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
         <div class="container px-5">
@@ -53,44 +68,15 @@
         </div>
       </nav>
 
-      <!-- Empty Project Section with white space -->
-      <section class="py-5">
-        <div class="container px-5 mb-5">
-          <div class="text-center mb-5">
-            <h1 class="display-5 fw-bolder mb-0">
-              <span class="text-gradient d-inline">Dashboards</span>
-            </h1>
-          </div>
-          <div class="row gx-5 justify-content-center">
-            <div class="col-lg-11 col-xl-9 col-xxl-8">
-              <div class="card overflow-hidden shadow rounded-4 border-0">
-                <div class="card-body p-5" style="min-height: 1200px;">
-                  <!-- Looker Studio iframe inserted here -->
-                  <iframe 
-                    width="600" 
-                    height="450" 
-                    src="https://lookerstudio.google.com/embed/reporting/5eca4ac7-c8e5-4f46-88a5-ecc0af8d8e13/page/y16SF" 
-                    frameborder="0" 
-                    style="border:0; width: 100%; max-width: 600px; height: 450px; display: block; margin: 0 auto;" 
-                    allowfullscreen 
-                    sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
-                  </iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Call to Action -->
-      <section class="py-5 bg-gradient-primary-to-secondary text-white">
-        <div class="container px-5 my-5">
-          <div class="text-center">
-            <h2 class="display-4 fw-bolder mb-4">Data is power</h2>
-            <a class="btn btn-outline-light btn-lg px-5 py-3 fs-6 fw-bolder" href="contact.html">Kontaktiere mich</a>
-          </div>
-        </div>
-      </section>
+      <!-- Fullscreen Dashboard Section -->
+      <div class="iframe-container">
+        <iframe 
+          class="full-dashboard"
+          src="https://lookerstudio.google.com/embed/reporting/5eca4ac7-c8e5-4f46-88a5-ecc0af8d8e13/page/y16SF"
+          allowfullscreen
+          sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
+        </iframe>
+      </div>
     </main>
 
     <!-- Footer -->
@@ -114,4 +100,3 @@
     <script src="js/scripts.js"></script>
   </body>
 </html>
-
