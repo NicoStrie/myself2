@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-NKZCVL8F');
+    </script>
+    <!-- End Google Tag Manager -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="IMDb User Ratings Embedded" />
+    <meta name="author" content="Nicolas Striebel" />
+    <title>IMDb User Ratings | Nicolas Striebel</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;700&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+      /* Ensure iframe fills container and scrolls */
+      .iframe-container {
+        position: relative;
+        width: 100%;
+        height: 80vh; /* Adjust height as needed */
+        border: none;
+        overflow: hidden;
+      }
+      .iframe-container iframe {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+    </style>
+  </head>
+  <body class="d-flex flex-column h-100">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKZCVL8F" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <main class="flex-shrink-0">
+      <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+        <div class="container px-5">
+          <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Nicolas Striebel</span></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Projects
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
+                  <li><a class="dropdown-item" href="consentbanner.html">Cookie Management Platform (CMP)</a></li>
+                  <li><a class="dropdown-item" href="conversionrateoptimisation.html">Conversion Rate Optimisation (CRO)</a></li>
+                  <li><a class="dropdown-item" href="analytics.html">DataLayer and Analytics Ecosystem</a></li>
+                  <li><a class="dropdown-item" href="dashboards.html">Dashboards</a></li>
+                  <li><a class="dropdown-item" href="artificial-intelligence.html">'AI-driven' scoring logic</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="myself.html">Myself</a></li>
+              <li class="nav-item"><a class="nav-link" href="random.html">Random</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Iframe Section -->
+      <section class="py-5">
+        <div class="container px-5 mb-5">
+          <div class="text-center mb-4">
+            <h1 class="display-5 fw-bolder mb-0">IMDb User Ratings</h1>
+            <p class="lead">Browse my personal IMDb ratings directly embedded.</p>
+          </div>
+          <div class="iframe-container">
+            <iframe
+              src="https://www.imdb.com/user/ur62897439/ratings/?ref_=ext_shr_lnk"
+              title="IMDb User Ratings"
+              loading="lazy"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action -->
+      <section class="py-5 bg-gradient-primary-to-secondary text-white">
+        <div class="container px-5 my-5">
+          <div class="text-center">
+            <h2 class="display-4 fw-bolder mb-4">Let's build something together</h2>
+            <a class="btn btn-outline-light btn-lg px-5 py-3 fs-6 fw-bolder" href="contact.html">Kontaktiere mich</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white py-4 mt-auto">
+      <div class="container px-5">
+        <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+          <div class="col-auto">
+            <div class="small m-0">nicolas-striebel.ch &copy; Alle Rechte vorbehalten.</div>
+          </div>
+          <div class="col-auto">
+            <a class="small" href="#">Privacy</a>
+            <span class="mx-1">&middot;</span>
+            <a class="small" href="#">Terms</a>
+            <span class="mx-1">&middot;</span>
+            <a class="small" href="contact.html">Kontakt</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

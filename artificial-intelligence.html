@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-NKZCVL8F');
+    </script>
+    <!-- End Google Tag Manager -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="AI-based Scoring Model for Intent Detection" />
+    <meta name="author" content="Nicolas Striebel" />
+    <title>AI-Based Scoring Model | Nicolas Striebel</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;700&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body class="d-flex flex-column h-100">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKZCVL8F" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <main class="flex-shrink-0">
+      <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+        <div class="container px-5">
+          <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Nicolas Striebel</span></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Projects
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
+                  <li><a class="dropdown-item" href="consentbanner.html">Cookie Management Platform (CMP)</a></li>
+                  <li><a class="dropdown-item" href="conversionrateoptimisation.html">Conversion Rate Optimisation (CRO)</a></li>
+                  <li><a class="dropdown-item" href="analytics.html">DataLayer and Analytics Ecosystem</a></li>
+                  <li><a class="dropdown-item" href="dashboards.html">Dashboards</a></li>
+                  <li><a class="dropdown-item" href="artificial-intelligence.html">'AI-driven' scoring logic</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="myself.html">Myself</a></li>
+              <li class="nav-item"><a class="nav-link" href="random.html">Random</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Project Section -->
+      <section class="py-5">
+        <div class="container px-5 mb-5">
+          <div class="text-center mb-5">
+            <h1 class="display-5 fw-bolder mb-0">
+              <span class="text-gradient d-inline">AI-Based Scoring Model for Real-Time User Intent Detection</span>
+            </h1>
+          </div>
+          <div class="row gx-5 justify-content-center">
+            <div class="col-lg-11 col-xl-9 col-xxl-8">
+              <div class="card overflow-hidden shadow rounded-4 border-0">
+                <div class="card-body p-5">
+
+                  <h2 class="fw-bolder">Adaptive Personalization Through Real-Time Intelligence</h2>
+                  <p>
+                    As part of a broader personalization strategy, I engineered an AI-powered scoring engine to detect user intent dynamically. This system fuels an intelligent pop-in delivery mechanism—nudging users toward conversion at the exact moment of opportunity, without intruding on their experience.
+                  </p>
+                  
+                  <h4 class="fw-bold mt-4">Moving Beyond Passive Analytics</h4>
+                  <p>
+                    Traditional analytics platforms capture retrospective insights. Valuable, yes—but static. My goal was to shift from passive reporting to active decisioning—powering UX elements with real-time behavioral analysis and algorithmic inference. Built initially for a major European automotive brand (under NDA), the model now serves as a core UX enhancement component across multiple brands and verticals.
+                  </p>
+
+                  <h4 class="fw-bold mt-4">Behavioral Signal Processing</h4>
+                  <p>
+                    The client-side engine parses dozens of live behavioral signals per session, such as:
+                    <ul>
+                      <li>Time-on-page and scroll velocity</li>
+                      <li>Cursor movements, click hesitation, and exit intent</li>
+                      <li>Navigation depth and funnel progression</li>
+                      <li>Idle detection, tab switching, and return frequency</li>
+                      <li>Campaign and referrer attribution</li>
+                    </ul>
+                    These signals are scored against a trained weight matrix to calculate an evolving composite intent score—allowing for in-session adaptation and precision targeting.
+                  </p>
+
+                  <h4 class="fw-bold mt-4">AI Model Architecture</h4>
+                  <p>
+                    On the back end, I trained a classification model using XGBoost and sequence modeling techniques in Python/TensorFlow. The dataset included labeled sessions (conversion vs. non-conversion), engagement metadata, and contextual session variables. Output is a discrete intent tier: <strong>low, medium, or high</strong>. The logic was then compiled into a lightweight JavaScript decision engine capable of sub-100ms client-side inference.
+                  </p>
+
+                  <h4 class="fw-bold mt-4">Pop-in Decision Framework</h4>
+                  <p>
+                    The scoring model governs the pop-in lifecycle: trigger timing, eligibility, and content variant selection. Medium-intent users receive helpful reminders or product comparisons. High-intent users may be shown personalized lead forms. Low-intent users remain uninterrupted—preserving cognitive flow and reducing modal fatigue.
+                  </p>
+
+                  <h4 class="fw-bold mt-4">Privacy-Conscious by Design</h4>
+                  <p>
+                    The engine operates entirely within GDPR and Swiss revDSG constraints:
+                    <ul>
+                      <li>Activates only after user consent via CMP</li>
+                      <li>Processes anonymized, session-scoped behavioral data</li>
+                      <li>No persistent identifiers or storage</li>
+                      <li>Asynchronous execution with no UI performance penalty</li>
+                    </ul>
+                    The model’s outputs are also compatible with experimentation tools, enabling A/B testing and KPI benchmarking.
+                  </p>
+
+                  <h4 class="fw-bold mt-4">Impact Metrics</h4>
+                  <p>
+                    Results from early production rollouts include:
+                    <ul>
+                      <li><strong>28%</strong> reduction in unnecessary pop-in impressions</li>
+                      <li><strong>17%</strong> lift in lead form conversions</li>
+                      <li>Notable improvement in average session duration and satisfaction scores</li>
+                    </ul>
+                    These gains stem from relevance, timing, and the absence of generic interruptions.
+                  </p>
+
+                  <h4 class="fw-bold mt-4">Future Scope & Scalability</h4>
+                  <p>
+                    This scoring model is now a foundation for broader UX optimization efforts. Its use cases extend to:
+                    <ul>
+                      <li>Intent-aware CTA rendering</li>
+                      <li>Real-time product recommendation logic</li>
+                      <li>Dynamic retargeting activation</li>
+                      <li>CRM enrichment and lead scoring</li>
+                    </ul>
+                    Modular by design, it’s retrainable and deployable across web, mobile, and embedded interfaces.
+                  </p>
+
+                  <h4 class="fw-bold mt-4">Closing Note</h4>
+                  <p>
+                    This project marks a high point in my work at the crossroads of AI and UX. It has sharpened my skills in real-time behavioral modeling, ethical tracking design, and lightweight client-side intelligence. More importantly, it redefines what digital personalization can look like when guided by user signals—not assumptions.
+                  </p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action -->
+      <section class="py-5 bg-gradient-primary-to-secondary text-white">
+        <div class="container px-5 my-5">
+          <div class="text-center">
+            <h2 class="display-4 fw-bolder mb-4">Implement your AI Tool Now!</h2>
+            <a class="btn btn-outline-light btn-lg px-5 py-3 fs-6 fw-bolder" href="contact.html">Kontaktiere mich</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white py-4 mt-auto">
+      <div class="container px-5">
+        <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+          <div class="col-auto">
+            <div class="small m-0">nicolas-striebel.ch &copy; Alle Rechte vorbehalten.</div>
+          </div>
+          <div class="col-auto">
+            <a class="small" href="#">Privacy</a>
+            <span class="mx-1">&middot;</span>
+            <a class="small" href="#">Terms</a>
+            <span class="mx-1">&middot;</span>
+            <a class="small" href="contact.html">contact me</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
