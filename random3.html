@@ -172,3 +172,129 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="js/scripts.js"></script>
   </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Cookie-Einwilligungsbanner</title>
+  <style>
+    #cookie-banner {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      max-width: 600px;
+      background: #fff;
+      padding: 30px;
+      border: 2px solid #ccc;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      font-family: sans-serif;
+      z-index: 9999;
+      display: none;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    #cookie-banner p {
+      margin-bottom: 20px;
+      font-size: 16px;
+      color: #333;
+    }
+
+    #cookie-banner a {
+      color: #007bff;
+      text-decoration: underline;
+    }
+
+    .cookie-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 20px;
+      font-size: 14px;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .btn-accept {
+      background-color: #4caf50;
+      color: white;
+    }
+
+    .btn-customize {
+      background: none;
+      color: #007bff;
+      text-decoration: underline;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .btn-reject {
+      background-color: #f44336;
+      color: white;
+    }
+
+    #settings-panel {
+      margin-top: 20px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<div id="cookie-banner">
+  <p>
+    Wir verwenden Cookies, um Inhalte und Anzeigen zu personalisieren, Funktionen für soziale Medien anzubieten und die Zugriffe auf unsere Website zu analysieren. 
+    Informationen zu Ihrer Nutzung unserer Website werden an unsere Partner für soziale Medien, Werbung und Analysen weitergegeben.
+    <a href="/datenschutz">Mehr erfahren</a>.
+  </p>
+  <div class="cookie-buttons">
+    <button class="btn-customize" onclick="openSettings()">Einstellungen</button>
+    <button class="btn btn-accept" onclick="handleConsent('granted')">Alle akzeptieren</button>
+  </div>
+
+  <div id="settings-panel">
+    <p>Hier können Sie Ihre Cookie-Einstellungen anpassen:</p>
+    <button class="btn btn-reject" onclick="handleConsent('denied')">Nur notwendige Cookies verwenden</button>
+  </div>
+</div>
+
+<script>
+  function handleConsent(status) {
+    gtag('consent', 'update', {
+      'ad_storage': status,
+      'analytics_storage': status
+    });
+
+    document.getElementById('cookie-banner').style.display = 'none';
+    localStorage.setItem('cookie_consent', status);
+    console.log("Cookie-Einwilligung gesetzt auf:", status);
+  }
+
+  function openSettings() {
+    document.getElementById('settings-panel').style.display = 'block';
+  }
+
+  // Show banner only if no consent has been stored
+  if (!localStorage.getItem('cookie_consent')) {
+    document.getElementById('cookie-banner').style.display = 'block';
+  }
+
+  // Google gtag setup
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'analytics_storage': 'denied'
+  });
+</script>
+
+</body>
+</html>
