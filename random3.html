@@ -1,179 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NKZCVL8F');</script>
-<!-- End Google Tag Manager -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Emil Frey Digital Analytics Infrastructure Project" />
-    <meta name="author" content="Nicolas Striebel" />
-    <title>Emil Frey Digital – Analytics Infrastructure</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;700&display=swap" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
-    <link href="css/styles.css" rel="stylesheet" />
-  </head>
-
-  <body class="d-flex flex-column h-100">
-   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKZCVL8F"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
-     <main class="flex-shrink-0">
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-      <div class="container px-5">
-        <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Nicolas Striebel</span></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Projects
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
-                <li><a class="dropdown-item" href="consentbanner.html">Cookie Management Platform (CMP)</a></li>
-                <li><a class="dropdown-item" href="conversionrateoptimisation.html">Conversion Rate Optimisation (CRO)</a></li>
-                <li><a class="dropdown-item" href="analytics.html">DataLayer and Analytics Ecosystem</a></li>
-                <li><a class="dropdown-item" href="dashboards.html">Dashboards</a></li>
-                <li><a class="dropdown-item" href="artificial-intelligence.html">'AI-driven' scoring logic</a></li>
-              </ul>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="myself.html">Myself</a></li>
-            <li class="nav-item"><a class="nav-link" href="random.html">Random</a></li>
-            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-
-      <!-- Project Content -->
-      <section class="py-5">
-        <div class="container px-5 mb-5">
-          <div class="text-center mb-5">
-            <h1 class="display-5 fw-bolder mb-0">
-              <span class="text-gradient d-inline">Building a Scalable Analytics Infrastructure</span>
-            </h1>
-            <p class="text-muted mt-2">for Automotive Brands</p>
-          </div>
-
-          <div class="row gx-5 justify-content-center">
-            <div class="col-lg-11 col-xl-9 col-xxl-8">
-              <div class="card overflow-hidden shadow rounded-4 border-0">
-                <div class="card-body p-5">
-                  <p>
-                    As part of my work with my current company, I was responsible for designing and deploying a robust analytics setup across localized websites for multiple automotive brands, including. These platforms served as <em>vehicle marketplaces</em>—dynamic digital environments where users could browse inventory, compare vehicle configurations, and initiate purchases or inquiries.
-                  </p>
-
-                  <p>
-                    The initiative was ambitious in scale and complexity. Each brand had distinct requirements, localized content, and customer journeys, yet we needed a unified and scalable analytics solution that ensured data quality, consistency, and actionable insights across all touchpoints.
-                  </p>
-
-                  <h4 class="fw-bold mt-4">Writing the Implementation Guide & DataLayer Architecture</h4>
-                  <p>
-                    One of my core contributions was authoring a comprehensive Implementation Guide (Javascript Datalayer Pushes) that served as the central reference for analytics across all brand websites. This document defined the data strategy, tracking logic, naming conventions, and governance rules. It was essential in aligning cross-functional teams—developers, analysts, marketers, and external partners—on a single source of truth.
-                  </p>
-
-                  <p>
-                    At the heart of this setup was a <strong>custom DataLayer</strong>, engineered to adhere to the best practices of e-commerce tracking. Unlike typical product catalog tracking, vehicles come with a rich set of attributes—such as model, brand, fuel type, color, horsepower (PS), transmission, and mileage. I ensured these attributes were systematically captured in the DataLayer for each vehicle listing, enabling both granular analysis and high-resolution segmentation.
-                  </p>
-
-                  <h4 class="fw-bold mt-4">Tagging Infrastructure: GTM, GA4, and Conversion Tracking</h4>
-                  <p>
-                    To bring this vision to life, I implemented a <strong>centralized Google Tag Manager (GTM) setup</strong> that allowed us to manage tags efficiently across multiple brand websites, while maintaining flexibility for localized adjustments. I built modular and reusable tag templates, with triggers and variables tailored for a variety of user interactions—from basic pageviews to advanced behaviors like vehicle comparisons, lead form submissions, and vehicle detail impressions.
-                  </p>
-
-                  <p>
-                    I also led the full integration of Google Analytics 4 (GA4), configuring custom events to track all key engagement points and ecommerce actions. Given GA4’s flexibility with event parameters, I made sure we passed all relevant vehicle attributes, which later proved vital for both behavioral analysis and audience segmentation.
-                  </p>
-
-                  <p>
-                    Additionally, I established integrations with key <strong>advertising and remarketing platforms</strong>, ensuring we could <em>feed enriched behavioral and product-level data</em> into tools such as Google Ads and Meta Ads. This enabled us to build powerful remarketing audiences—for example, users who viewed only hybrid vehicles with 150+ PS or those who interacted with specific models in particular geographic regions.
-                  </p>
-
-                  <h4 class="fw-bold mt-4">Unlocking Insights & Optimizing Ad Spend</h4>
-                  <p>
-                    The long-term goal of this analytics setup wasn’t just tracking for the sake of reporting—it was about activating data to drive performance.
-                  </p>
-
-                  <ul>
-                    <li>Build micro-audiences based on user interest and vehicle features</li>
-                    <li>Launch dynamic remarketing campaigns with real vehicle data</li>
-                    <li>Improve ad efficiency through high-quality event & product data</li>
-                    <li>Enable <strong>predictive modeling</strong> for churn prediction and lead scoring</li>
-                  </ul>
-
-                  <p>
-                    Campaigns targeting vehicle-specific audiences saw a measurable lift in CTR and lower CPCs, and retargeting lists became significantly more relevant and effective.
-                  </p>
-
-                  <h4 class="fw-bold mt-4">Collaboration and Ownership</h4>
-                  <p>
-                    Throughout the project, I acted as the bridge between technical and business teams —translating strategic marketing goals into implementable technical solutions. I worked closely with developers during implementation, QA teams for testing data accuracy, and marketing stakeholders to define KPIs and optimize campaign structures based on the analytics data.
-                  </p>
-
-                  <p class="mt-4">
-                    By delivering both the technical foundation and the operational processes to support it, I helped Emil Frey Digital and its partner brands move toward a truly data-informed marketing ecosystem, scalable across markets and adaptable to evolving business goals.
-                  </p>
-
-                  <p class="mt-4">
-                    <em>This project highlighted not just my proficiency with tools like Google Tag Manager and GA4, but also my ability to architect large-scale tracking systems, translate complex data into strategic insights, and drive cross-functional collaboration to execute those insights into business value.</em>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- CTA -->
-      <section class="py-5 bg-gradient-primary-to-secondary text-white">
-        <div class="container px-5 my-5">
-          <div class="text-center">
-            <h2 class="display-4 fw-bolder mb-4">Let's build something together</h2>
-            <a class="btn btn-outline-light btn-lg px-5 py-3 fs-6 fw-bolder" href="contact.html">Contact me</a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-white py-4 mt-auto">
-      <div class="container px-5">
-        <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-          <div class="col-auto">
-            <div class="small m-0">nicolas-striebel.ch &copy; Alle Rechte vorbehalten.</div>
-          </div>
-          <div class="col-auto">
-            <a class="small" href="#">Privacy</a>
-            <span class="mx-1">&middot;</span>
-            <a class="small" href="#">Terms</a>
-            <span class="mx-1">&middot;</span>
-            <a class="small" href="contact.html">Kontakt</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/scripts.js"></script>
-  </body>
-</html>
-
-<!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8">
@@ -213,6 +38,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       justify-content: center;
       gap: 15px;
       flex-wrap: wrap;
+      align-items: center;
     }
 
     .btn {
@@ -226,6 +52,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     .btn-accept {
       background-color: #4caf50;
       color: white;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
     .btn-customize {
@@ -241,32 +70,88 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       color: white;
     }
 
+    .btn-lang {
+      background-color: #ddd;
+      margin-bottom: 15px;
+      padding: 6px 10px;
+      font-size: 12px;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+    }
+
     #settings-panel {
       margin-top: 20px;
       display: none;
+    }
+
+    .accept-gif {
+      height: 24px;
     }
   </style>
 </head>
 <body>
 
 <div id="cookie-banner">
-  <p>
+  <div>
+    <button class="btn-lang" onclick="switchLang('de')">🇩🇪</button>
+    <button class="btn-lang" onclick="switchLang('en')">🇬🇧</button>
+    <button class="btn-lang" onclick="switchLang('it')">🇮🇹</button>
+    <button class="btn-lang" onclick="switchLang('fr')">🇫🇷</button>
+  </div>
+
+  <p id="cookie-text">
     Wir verwenden Cookies, um Inhalte und Anzeigen zu personalisieren, Funktionen für soziale Medien anzubieten und die Zugriffe auf unsere Website zu analysieren. 
     Informationen zu Ihrer Nutzung unserer Website werden an unsere Partner für soziale Medien, Werbung und Analysen weitergegeben.
     <a href="/datenschutz">Mehr erfahren</a>.
   </p>
+
   <div class="cookie-buttons">
-    <button class="btn-customize" onclick="openSettings()">Einstellungen</button>
-    <button class="btn btn-accept" onclick="handleConsent('granted')">Alle akzeptieren</button>
+    <button class="btn-customize" onclick="openSettings()" id="settings-btn">Einstellungen</button>
+    <button class="btn btn-accept" onclick="handleConsent('granted')" id="accept-btn">
+      <span id="accept-label">Alle akzeptieren</span>
+      <img src="accept.gif" alt="Accept" class="accept-gif">
+    </button>
   </div>
 
   <div id="settings-panel">
-    <p>Hier können Sie Ihre Cookie-Einstellungen anpassen:</p>
-    <button class="btn btn-reject" onclick="handleConsent('denied')">Nur notwendige Cookies verwenden</button>
+    <p id="settings-text">Hier können Sie Ihre Cookie-Einstellungen anpassen:</p>
+    <button class="btn btn-reject" onclick="handleConsent('denied')" id="reject-btn">Nur notwendige Cookies verwenden</button>
   </div>
 </div>
 
 <script>
+  const translations = {
+    de: {
+      text: "Wir verwenden Cookies, um Inhalte und Anzeigen zu personalisieren, Funktionen für soziale Medien anzubieten und die Zugriffe auf unsere Website zu analysieren. Informationen zu Ihrer Nutzung unserer Website werden an unsere Partner für soziale Medien, Werbung und Analysen weitergegeben. <a href='/datenschutz'>Mehr erfahren</a>.",
+      accept: "Alle akzeptieren",
+      customize: "Einstellungen",
+      reject: "Nur notwendige Cookies verwenden",
+      settingsText: "Hier können Sie Ihre Cookie-Einstellungen anpassen:"
+    },
+    en: {
+      text: "We use cookies to personalize content and ads, provide social media features, and analyze our traffic. Information about your use of our site is shared with our social media, advertising, and analytics partners. <a href='/privacy'>Learn more</a>.",
+      accept: "Accept all",
+      customize: "Settings",
+      reject: "Use necessary cookies only",
+      settingsText: "Here you can adjust your cookie preferences:"
+    },
+    it: {
+      text: "Utilizziamo i cookie per personalizzare contenuti e annunci, fornire funzionalità dei social media e analizzare il nostro traffico. Le informazioni sull'utilizzo del sito sono condivise con i nostri partner di social media, pubblicità e analisi. <a href='/privacy'>Scopri di più</a>.",
+      accept: "Accetta tutto",
+      customize: "Impostazioni",
+      reject: "Usa solo cookie necessari",
+      settingsText: "Qui puoi modificare le tue preferenze sui cookie:"
+    },
+    fr: {
+      text: "Nous utilisons des cookies pour personnaliser le contenu et les publicités, offrir des fonctionnalités de médias sociaux et analyser notre trafic. Les informations sur votre utilisation de notre site sont partagées avec nos partenaires de médias sociaux, de publicité et d’analyse. <a href='/confidentialite'>En savoir plus</a>.",
+      accept: "Tout accepter",
+      customize: "Paramètres",
+      reject: "Utiliser uniquement les cookies nécessaires",
+      settingsText: "Ici, vous pouvez ajuster vos préférences en matière de cookies :"
+    }
+  };
+
   function handleConsent(status) {
     gtag('consent', 'update', {
       'ad_storage': status,
@@ -282,10 +167,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     document.getElementById('settings-panel').style.display = 'block';
   }
 
-  // Show banner only if no consent has been stored
-  if (!localStorage.getItem('cookie_consent')) {
-    document.getElementById('cookie-banner').style.display = 'block';
+  function switchLang(lang) {
+    const t = translations[lang];
+    document.getElementById('cookie-text').innerHTML = t.text;
+    document.getElementById('accept-label').innerText = t.accept;
+    document.getElementById('settings-btn').innerText = t.customize;
+    document.getElementById('reject-btn').innerText = t.reject;
+    document.getElementById('settings-text').innerText = t.settingsText;
   }
+
+  // Show banner only if no consent has been stored
+  window.addEventListener('DOMContentLoaded', function () {
+    if (!localStorage.getItem('cookie_consent')) {
+      document.getElementById('cookie-banner').style.display = 'block';
+      switchLang('de'); // default language
+    }
+  });
 
   // Google gtag setup
   window.dataLayer = window.dataLayer || [];
