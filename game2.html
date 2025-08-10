@@ -3,32 +3,44 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Neon Racer - Nicolas Striebel</title>
+<title>The Racing Game</title>
 <style>
   body {
     margin: 0;
     background: black;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
     color: #0ff;
     font-family: 'Courier New', monospace;
+  }
+  #topText {
+    font-size: 12px;
+    margin-top: 8px;
+    color: #0ff;
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
   }
   canvas {
     border: 2px solid #0ff;
     background: linear-gradient(to bottom, #000, #111 40%, #000 100%);
+    margin-top: 5px;
+    display: block;
   }
 </style>
 </head>
 <body>
+
+<!-- Placeholder: GTM, Nav, Cookie banner go here -->
+
+<div id="topText">Created with love…</div>
 <canvas id="gameCanvas" width="500" height="700"></canvas>
+
 <script>
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 ctx.imageSmoothingEnabled = false;
 
-let carName = prompt("Enter the name of your car:", "My Racer") || "My Racer";
+let carName = prompt("Enter the name of your car:", "My little pony") || "My little pony";
 
 let player = { x: 200, y: 600, width: 40, height: 80, speed: 40 };
 let otherCars = [];
@@ -57,6 +69,23 @@ const categories = [
 let categoryPoints = {};
 categories.forEach(cat => categoryPoints[cat.name] = 0);
 
+// Neon button style
+function drawNeonButton(x, y, w, h, text, glowColor) {
+  ctx.fillStyle = 'black';
+  ctx.fillRect(x, y, w, h);
+  ctx.strokeStyle = glowColor;
+  ctx.lineWidth = 2;
+  ctx.shadowColor = glowColor;
+  ctx.shadowBlur = 20;
+  ctx.strokeRect(x, y, w, h);
+  ctx.shadowBlur = 0;
+  ctx.fillStyle = glowColor;
+  ctx.font = '16px monospace';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText(text, x + w/2, y + h/2);
+}
+
 function drawPlayerCar() {
   ctx.fillStyle = carColor;
   ctx.fillRect(player.x, player.y, player.width, player.height);
@@ -64,7 +93,8 @@ function drawPlayerCar() {
   ctx.fillRect(player.x + 8, player.y + 10, player.width - 16, player.height - 20);
   ctx.fillStyle = '#0ff';
   ctx.font = '12px monospace';
-  ctx.fillText(carName, player.x - 10, player.y - 5);
+  ctx.textAlign = 'center';
+  ctx.fillText(carName, player.x + player.width/2, player.y - 5);
 }
 
 function spawnOtherCar() {
@@ -117,7 +147,7 @@ function update() {
   if (Date.now() - lastSpeedIncrease > 10000) {
     speed += 0.5;
     lastSpeedIncrease = Date.now();
-    speedUpMessageTimer = 60; // show message for 60 frames
+    speedUpMessageTimer = 60;
     roadColor = getRandomColor();
     carColor = getRandomColor();
   }
@@ -140,8 +170,9 @@ function update() {
     ctx.beginPath();
     ctx.arc(coin.x + coin.size/2, coin.y + coin.size/2, coin.size/2, 0, Math.PI * 2);
     ctx.fill();
-    ctx.fillStyle = '#0f0'; // green text
+    ctx.fillStyle = '#0f0';
     ctx.font = '12px monospace';
+    ctx.textAlign = 'left';
     ctx.fillText(coin.category.name, coin.x + coin.size + 5, coin.y + coin.size/2 + 4);
     if (checkCollision(player, {x: coin.x, y: coin.y, width: coin.size, height: coin.size})) {
       categoryPoints[coin.category.name]++;
@@ -176,6 +207,7 @@ function drawScoreCard() {
   ctx.fillRect(5, 5, 200, 20 + categories.length * 15);
   ctx.fillStyle = '#0ff';
   ctx.font = '12px monospace';
+  ctx.textAlign = 'left';
   let y = 20;
   let total = 0;
   categories.forEach(cat => {
@@ -197,30 +229,25 @@ function endGame() {
   ctx.fillRect(0,0,canvas.width,canvas.height);
   ctx.fillStyle = '#0ff';
   ctx.font = '20px monospace';
-  ctx.fillText('GAME OVER', 180, 200);
-  let y = 240;
-  for (let cat in categoryPoints) {
-    ctx.fillText(`${cat}: ${categoryPoints[cat]} points`, 50, y);
-    y += 25;
-  }
-  ctx.fillText('Created with love by Nicolas Striebel', 30, y + 40);
-  ctx.fillText('Press SPACE to restart', 120, y + 70);
-  ctx.fillText('If you liked the game, kudos here:', 50, y + 110);
-  ctx.fillText('Contact Me', 200, y + 130);
-  ctx.fillText('Or browse my projects:', 50, y + 160);
-  ctx.fillText('My Projects', 200, y + 180);
+  ctx.textAlign = 'center';
+  ctx.fillText('GAME OVER..press spacebar to retry', canvas.width/2, 150);
 
-  canvas.addEventListener('click', function(evt) {
+  let btnY = 200;
+  drawNeonButton(120, btnY, 120, 40, 'Contact Me', '#0ff');
+  drawNeonButton(260, btnY, 120, 40, 'My Projects', '#f0f');
+
+  canvas.addEventListener('click', function clickHandler(evt) {
     const rect = canvas.getBoundingClientRect();
     const mouseX = evt.clientX - rect.left;
     const mouseY = evt.clientY - rect.top;
-    if (mouseY > y + 115 && mouseY < y + 135) {
+
+    if (mouseX >= 120 && mouseX <= 240 && mouseY >= btnY && mouseY <= btnY + 40) {
       window.open('https://nicostrie.github.io/myself2/contact.html', '_blank');
     }
-    if (mouseY > y + 165 && mouseY < y + 185) {
+    if (mouseX >= 260 && mouseX <= 380 && mouseY >= btnY && mouseY <= btnY + 40) {
       window.open('https://nicostrie.github.io/myself2/artificial-intelligence.html', '_blank');
     }
-  });
+  }, { once: true });
 }
 
 function resetGame() {
@@ -242,15 +269,16 @@ function getRandomColor() {
   return colors[Math.floor(Math.random() * colors.length)];
 }
 
-// Instructions screen
+// Instructions
 ctx.fillStyle = '#0ff';
 ctx.font = '18px monospace';
-ctx.fillText('NEON RACER - NICOLAS STRIEBEL', 80, 160);
-ctx.fillText('Use LEFT/RIGHT to move sideways', 60, 200);
-ctx.fillText('Use UP/DOWN to move forward/back', 60, 230);
-ctx.fillText('Collect category coins for points', 60, 260);
-ctx.fillText('Avoid other cars!', 160, 290);
-ctx.fillText('Press SPACE to start', 140, 320);
+ctx.textAlign = 'center';
+ctx.fillText('THE RACING GAME', canvas.width/2, 160);
+ctx.fillText('Use LEFT/RIGHT to move sideways', canvas.width/2, 200);
+ctx.fillText('Use UP/DOWN to move forward/back', canvas.width/2, 230);
+ctx.fillText('Collect category coins for points', canvas.width/2, 260);
+ctx.fillText('Avoid other cars!', canvas.width/2, 290);
+ctx.fillText('Press SPACE to start', canvas.width/2, 320);
 </script>
 </body>
 </html>
