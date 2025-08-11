@@ -1,52 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, 'script', 'dataLayer', 'GTM-NKZCVL8F');
-    </script>
-    <!-- End Google Tag Manager -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="IMDb User Ratings Embedded" />
-    <meta name="author" content="Nicolas Striebel" />
-    <title>IMDb User Ratings | Nicolas Striebel</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;700&display=swap" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
-    <link href="css/styles.css" rel="stylesheet" />
-    <style>
-      /* Ensure iframe fills container and scrolls */
-      .iframe-container {
-        position: relative;
-        width: 100%;
-        height: 80vh; /* Adjust height as needed */
-        border: none;
-        overflow: hidden;
-      }
-      .iframe-container iframe {
-        position: absolute;
-        top: 0; left: 0;
-        width: 100%;
-        height: 100%;
-        border: none;
-      }
-    </style>
-  </head>
-  <body class="d-flex flex-column h-100">
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKZCVL8F" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <main class="flex-shrink-0">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NKZCVL8F');</script>
+<!-- End Google Tag Manager -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Racing Game</title>
+<style>
+  body {
+    margin: 0;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #0ff;
+    font-family: 'Courier New', monospace;
+  }
+  #topText {
+    font-size: 12px;
+    margin-top: 8px;
+    color: #0ff;
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+  }
+  canvas {
+    border: 2px solid #0ff;
+    background: linear-gradient(to bottom, #000, #111 40%, #000 100%);
+    margin-top: 5px;
+    display: block;
+  }
+</style>
+</head>
+ <body class="d-flex flex-column h-100">
+   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKZCVL8F"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <!-- Navigation -->
       <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
         <div class="container px-5">
           <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Nicolas Striebel</span></a>
@@ -58,75 +52,276 @@
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
               <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
               <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Projects
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
-                  <li><a class="dropdown-item" href="consentbanner.html">Cookie Management Platform (CMP)</a></li>
-                  <li><a class="dropdown-item" href="conversionrateoptimisation.html">Conversion Rate Optimisation (CRO)</a></li>
-                  <li><a class="dropdown-item" href="analytics.html">DataLayer and Analytics Ecosystem</a></li>
-                  <li><a class="dropdown-item" href="dashboards.html">Dashboards</a></li>
-                  <li><a class="dropdown-item" href="artificial-intelligence.html">'AI-driven' scoring logic</a></li>
-                </ul>
-              </li>
-              <li class="nav-item"><a class="nav-link" href="myself.html">Myself</a></li>
-              <li class="nav-item"><a class="nav-link" href="random.html">Random</a></li>
+              <li class="nav-item"><a class="nav-link" href="projects.html">Project</a></li>
               <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
             </ul>
           </div>
         </div>
       </nav>
 
-      <!-- Iframe Section -->
-      <section class="py-5">
-        <div class="container px-5 mb-5">
-          <div class="text-center mb-4">
-            <h1 class="display-5 fw-bolder mb-0">IMDb User Ratings</h1>
-            <p class="lead">Browse my personal IMDb ratings directly embedded.</p>
-          </div>
-          <div class="iframe-container">
-            <iframe
-              src="https://www.imdb.com/user/ur62897439/ratings/?ref_=ext_shr_lnk"
-              title="IMDb User Ratings"
-              loading="lazy"
-              allowfullscreen
-            ></iframe>
-          </div>
-        </div>
-      </section>
+<body>
 
-      <!-- Call to Action -->
-      <section class="py-5 bg-gradient-primary-to-secondary text-white">
-        <div class="container px-5 my-5">
-          <div class="text-center">
-            <h2 class="display-4 fw-bolder mb-4">Let's build something together</h2>
-            <a class="btn btn-outline-light btn-lg px-5 py-3 fs-6 fw-bolder" href="contact.html">Kontaktiere mich</a>
-          </div>
-        </div>
-      </section>
-    </main>
+<!-- Placeholder: GTM, Nav, Cookie banner go here -->
 
-    <!-- Footer -->
-    <footer class="bg-white py-4 mt-auto">
-      <div class="container px-5">
-        <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-          <div class="col-auto">
-            <div class="small m-0">nicolas-striebel.ch &copy; Alle Rechte vorbehalten.</div>
-          </div>
-          <div class="col-auto">
-            <a class="small" href="#">Privacy</a>
-            <span class="mx-1">&middot;</span>
-            <a class="small" href="#">Terms</a>
-            <span class="mx-1">&middot;</span>
-            <a class="small" href="contact.html">Kontakt</a>
-          </div>
-        </div>
-      </div>
-    </footer>
+<div id="topText">Created with love…</div>
+<canvas id="gameCanvas" width="500" height="700"></canvas>
 
-    <!-- Bootstrap JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/scripts.js"></script>
-  </body>
+<script>
+window.dataLayer = window.dataLayer || [];
+dataLayer.push({ event: 'view_game' }); // View game on load
+
+const canvas = document.getElementById('gameCanvas');
+const ctx = canvas.getContext('2d');
+ctx.imageSmoothingEnabled = false;
+
+let carName = prompt("Enter the name of your car:", "My little pony") || "My little pony";
+
+let player = { x: 200, y: 600, width: 40, height: 80, speed: 40 };
+let otherCars = [];
+let coins = [];
+let speed = 4;
+let lastSpeedIncrease = Date.now();
+let isGameOver = false;
+let isGameStarted = false;
+let speedUpMessageTimer = 0;
+
+let roadColor = '#0ff';
+let carColor = '#0ff';
+
+const categories = [
+  {name: 'Data Lake', color: '#ff0'},
+  {name: 'GDPR', color: '#0f0'},
+  {name: 'Cookie Banners', color: '#0ff'},
+  {name: 'Dashboards', color: '#f0f'},
+  {name: 'Reporting', color: '#f90'},
+  {name: 'Attribution', color: '#09f'},
+  {name: 'Data Strategy', color: '#f44'},
+  {name: 'Floodlights', color: '#4f4'},
+  {name: 'HTML', color: '#44f'},
+  {name: 'Scoring Model', color: '#fa0'}
+];
+let categoryPoints = {};
+categories.forEach(cat => categoryPoints[cat.name] = 0);
+
+// Neon button style
+function drawNeonButton(x, y, w, h, text, glowColor) {
+  ctx.fillStyle = 'black';
+  ctx.fillRect(x, y, w, h);
+  ctx.strokeStyle = glowColor;
+  ctx.lineWidth = 2;
+  ctx.shadowColor = glowColor;
+  ctx.shadowBlur = 20;
+  ctx.strokeRect(x, y, w, h);
+  ctx.shadowBlur = 0;
+  ctx.fillStyle = glowColor;
+  ctx.font = '16px monospace';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText(text, x + w/2, y + h/2);
+}
+
+function drawPlayerCar() {
+  ctx.fillStyle = carColor;
+  ctx.fillRect(player.x, player.y, player.width, player.height);
+  ctx.fillStyle = '#222';
+  ctx.fillRect(player.x + 8, player.y + 10, player.width - 16, player.height - 20);
+  ctx.fillStyle = '#0ff';
+  ctx.font = '12px monospace';
+  ctx.textAlign = 'center';
+  ctx.fillText(carName, player.x + player.width/2, player.y - 5);
+}
+
+function spawnOtherCar() {
+  if (otherCars.length < 3 && Math.random() < 0.02) {
+    otherCars.push({
+      x: Math.floor(Math.random() * (canvas.width - player.width)),
+      y: -100,
+      width: player.width,
+      height: player.height,
+      color: '#f0f'
+    });
+  }
+}
+
+function spawnCoin() {
+  if (Math.random() < 0.02) {
+    const cat = categories[Math.floor(Math.random() * categories.length)];
+    coins.push({
+      x: Math.random() * (canvas.width - 50),
+      y: -40,
+      size: 50,
+      category: cat
+    });
+  }
+}
+
+document.addEventListener('keydown', e => {
+  if (!isGameStarted && e.code === 'Space') {
+    isGameStarted = true;
+    dataLayer.push({ event: 'start_game' }); // Start game
+    update();
+    return;
+  }
+  if (isGameOver && e.code === 'Space') {
+    dataLayer.push({ event: 'restart_game' }); // Restart game
+    resetGame();
+    return;
+  }
+  if (!isGameStarted) return;
+  if (e.code === 'ArrowLeft') player.x = Math.max(0, player.x - player.speed);
+  if (e.code === 'ArrowRight') player.x = Math.min(canvas.width - player.width, player.x + player.speed);
+  if (e.code === 'ArrowUp') player.y = Math.max(0, player.y - player.speed);
+  if (e.code === 'ArrowDown') player.y = Math.min(canvas.height - player.height, player.y + player.speed);
+});
+
+function update() {
+  if (isGameOver) return;
+
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  drawRoad();
+
+  if (Date.now() - lastSpeedIncrease > 10000) {
+    speed += 0.5;
+    lastSpeedIncrease = Date.now();
+    speedUpMessageTimer = 60;
+    roadColor = getRandomColor();
+    carColor = getRandomColor();
+  }
+
+  drawPlayerCar();
+
+  spawnOtherCar();
+  otherCars.forEach((car, i) => {
+    car.y += speed;
+    ctx.fillStyle = car.color;
+    ctx.fillRect(car.x, car.y, car.width, car.height);
+    if (checkCollision(player, car)) endGame();
+    if (car.y > canvas.height) otherCars.splice(i, 1);
+  });
+
+  spawnCoin();
+  coins.forEach((coin, i) => {
+    coin.y += speed;
+    ctx.fillStyle = coin.category.color;
+    ctx.beginPath();
+    ctx.arc(coin.x + coin.size/2, coin.y + coin.size/2, coin.size/2, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.fillStyle = '#0f0';
+    ctx.font = '12px monospace';
+    ctx.textAlign = 'left';
+    ctx.fillText(coin.category.name, coin.x + coin.size + 5, coin.y + coin.size/2 + 4);
+    if (checkCollision(player, {x: coin.x, y: coin.y, width: coin.size, height: coin.size})) {
+      categoryPoints[coin.category.name]++;
+      coins.splice(i, 1);
+    }
+    if (coin.y > canvas.height) coins.splice(i, 1);
+  });
+
+  drawScoreCard();
+  if (speedUpMessageTimer > 0) {
+    ctx.fillStyle = '#ff0';
+    ctx.font = '20px monospace';
+    ctx.fillText('Speed Up!', 200, 50);
+    speedUpMessageTimer--;
+  }
+  requestAnimationFrame(update);
+}
+
+function drawRoad() {
+  ctx.strokeStyle = roadColor;
+  ctx.lineWidth = 4;
+  for (let y = 0; y < canvas.height; y += 40) {
+    ctx.beginPath();
+    ctx.moveTo(canvas.width/2, y);
+    ctx.lineTo(canvas.width/2, y+20);
+    ctx.stroke();
+  }
+}
+
+function drawScoreCard() {
+  ctx.fillStyle = 'rgba(0,0,0,0.5)';
+  ctx.fillRect(5, 5, 200, 20 + categories.length * 15);
+  ctx.fillStyle = '#0ff';
+  ctx.font = '12px monospace';
+  ctx.textAlign = 'left';
+  let y = 20;
+  let total = 0;
+  categories.forEach(cat => {
+    ctx.fillText(`${cat.name}: ${categoryPoints[cat.name]}`, 10, y);
+    total += categoryPoints[cat.name];
+    y += 15;
+  });
+  ctx.fillText(`TOTAL: ${total}`, 10, y);
+}
+
+function checkCollision(a, b) {
+  return a.x < b.x + b.width && a.x + a.width > b.x &&
+         a.y < b.y + b.height && a.y + a.height > b.y;
+}
+
+function endGame() {
+  let totalPoints = Object.values(categoryPoints).reduce((a,b) => a+b, 0);
+  dataLayer.push({ 
+    event: 'end_game', 
+    total_points: totalPoints, 
+    car_name: carName 
+  }); // End game event
+  
+  isGameOver = true;
+  ctx.fillStyle = 'rgba(0,0,0,0.8)';
+  ctx.fillRect(0,0,canvas.width,canvas.height);
+  ctx.fillStyle = '#0ff';
+  ctx.font = '20px monospace';
+  ctx.textAlign = 'center';
+  ctx.fillText('GAME OVER..press spacebar to retry', canvas.width/2, 150);
+
+  let btnY = 200;
+  drawNeonButton(120, btnY, 120, 40, 'Contact Me', '#0ff');
+  drawNeonButton(260, btnY, 120, 40, 'My Projects', '#f0f');
+
+  canvas.addEventListener('click', function clickHandler(evt) {
+    const rect = canvas.getBoundingClientRect();
+    const mouseX = evt.clientX - rect.left;
+    const mouseY = evt.clientY - rect.top;
+
+    if (mouseX >= 120 && mouseX <= 240 && mouseY >= btnY && mouseY <= btnY + 40) {
+      window.open('https://nicostrie.github.io/myself2/contact.html', '_blank');
+    }
+    if (mouseX >= 260 && mouseX <= 380 && mouseY >= btnY && mouseY <= btnY + 40) {
+      window.open('https://nicostrie.github.io/myself2/artificial-intelligence.html', '_blank');
+    }
+  }, { once: true });
+}
+
+function resetGame() {
+  otherCars = [];
+  coins = [];
+  categories.forEach(cat => categoryPoints[cat.name] = 0);
+  speed = 4;
+  lastSpeedIncrease = Date.now();
+  isGameOver = false;
+  player.x = 200;
+  player.y = 600;
+  roadColor = '#0ff';
+  carColor = '#0ff';
+  update();
+}
+
+function getRandomColor() {
+  const colors = ['#0ff', '#f0f', '#ff0', '#0f0', '#f90', '#09f', '#f44', '#44f'];
+  return colors[Math.floor(Math.random() * colors.length)];
+}
+
+// Instructions
+ctx.fillStyle = '#0ff';
+ctx.font = '18px monospace';
+ctx.textAlign = 'center';
+ctx.fillText('THE RACING GAME', canvas.width/2, 160);
+ctx.fillText('Use LEFT/RIGHT to move sideways', canvas.width/2, 200);
+ctx.fillText('Use UP/DOWN to move forward/back', canvas.width/2, 230);
+ctx.fillText('Collect category coins for points', canvas.width/2, 260);
+ctx.fillText('Avoid other cars!', canvas.width/2, 290);
+ctx.fillText('Press SPACE to start', canvas.width/2, 320);
+</script>
+</body>
 </html>
