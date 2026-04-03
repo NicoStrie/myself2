@@ -99,7 +99,7 @@
                   Random
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
-                  <li><a class="dropdown-item" href="game2.html">The Game</a></li>
+                  <li><a class="dropdown-item" href="game2.html">The Racing Game</a></li>
                   <li><a class="dropdown-item" href="random.html">My favorite movies</a></li>
                
                 </ul>
@@ -119,7 +119,7 @@
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>The Mailbox Game</title>
+<title>Mailman Game</title>
 
 <link href="css/styles.css" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;700&display=swap" rel="stylesheet" />
@@ -178,7 +178,7 @@ height="0" width="0" style="display:none"></iframe>
 <section class="py-5">
 <div class="container text-center">
 
-<h2 class="fw-bold mb-3">The Happy Mailbox Game</h2>
+<h2 class="fw-bold mb-3">🎮 Mailman Game</h2>
 
 <!-- GAME FRAME -->
 <div class="game-frame" style="
@@ -212,7 +212,7 @@ height="0" width="0" style="display:none"></iframe>
   <p class="small mt-3 text-center">
     Move ← → or mouse<br>
     📩 +1 | 🎁 +100 | 🪨 Game Over<br>
-    ⚡ Speed increases every 8 letters
+    ⚡ Speed increases every 8 mails
   </p>
 
 </div>
@@ -317,14 +317,12 @@ document.addEventListener("keydown", e => {
   if (e.key === "ArrowRight") player.x += 30;
 });
 
-
-
 function spawnObject() {
   if (gameOver) return;
 
   let type = "mail";
 
-  if (lettersCollected > 0 && lettersCollected % 5 === 0) {
+  if (lettersCollected > 0 && lettersCollected % 10 === 0) {
     type = "rock";
     lettersCollected++;
   }
@@ -340,18 +338,6 @@ function spawnObject() {
     type: type
   });
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 function update() {
   if (gameOver) return;
@@ -417,7 +403,7 @@ function update() {
   requestAnimationFrame(update);
 }
 
-setInterval(spawnObject, 500);
+setInterval(spawnObject, 1000);
 </script>
 <script>
 let canvas, ctx;
