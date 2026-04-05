@@ -279,6 +279,11 @@ function startGame() {
     return;
   }
 
+dataLayer.push({
+  event: 'view_game',
+  player_name: playerName
+});
+
   document.getElementById("startScreen").style.display = "none";
   document.getElementById("playerDisplay").innerText = playerName;
 
@@ -390,6 +395,13 @@ function update() {
 
       if (obj.type === "rock") {
         gameOver = true;
+
+
+dataLayer.push({
+    event: 'end_game',
+    car_name: playerName,
+    total_points: score
+      });
 
         leaderboard.push({ name: playerName, score: score });
         localStorage.setItem("postmanLeaderboard", JSON.stringify(leaderboard));
