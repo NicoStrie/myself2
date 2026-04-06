@@ -237,8 +237,13 @@ Score: <span id="score">0</span>
 <div class="mt-4">
   <h5>🏆 Leaderboard</h5>
   <ol id="leaderboard" class="text-start d-inline-block"></ol>
-</div>
 
+  <p class="mt-3">
+    👉 <a href="https://nicostrie.github.io/myself2/leaderboard.html" target="_blank">
+      Click here to see all results and stats
+    </a>
+  </p>
+</div>
 <p class="mt-3 small">
 This game is Created by Nicolas Striebel - Have fun!
 </p>
@@ -409,11 +414,18 @@ dataLayer.push({
         renderLeaderboard();
 
         document.getElementById("startScreen").style.display = "flex";
-        document.getElementById("startScreen").innerHTML = `
-          <h3>Game Over</h3>
-          <p>${playerName}, your score: ${score}</p>
-          <button class="btn btn-primary mt-2" onclick="location.reload()">Play Again</button>
-        `;
+document.getElementById("startScreen").innerHTML = `
+  <h3>Game Over</h3>
+  <p><strong>${playerName}</strong>, your score: <strong>${score}</strong></p>
+
+  <p class="mt-3">
+    👉 <a href="https://nicostrie.github.io/myself2/leaderboard.html" target="_blank">
+      Click here to see all results and stats
+    </a>
+  </p>
+
+  <button class="btn btn-primary mt-2" onclick="location.reload()">Play Again</button>
+`;
       }
 
       objects.splice(i, 1);
